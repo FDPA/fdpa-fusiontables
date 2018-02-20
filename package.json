@@ -1,0 +1,21 @@
+{
+  "name": "fdpa-fusiontables",
+  "version": "1.0.0",
+  "description": "Fair Districts PA fusiontables language binding",
+  "main": "js/fusionApi.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "fair",
+    "districts",
+    "Pennsylvania",
+    "gerrymandering",
+    "resolutions"
+  ],
+  "author": "Robin Schaufler",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^3.11.0"
+  }
+}
