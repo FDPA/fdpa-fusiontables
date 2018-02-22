@@ -10,25 +10,24 @@ import fdpaResolutions from 'fdpa/fusionApi.js';
         fusiontable: '10Uc_t_dBYUV_K_j6HdCMSgLXGs94bXvunQBGDOjF',
         // Developers: Substitute your API key here.
         googleApiKey: 'AIzaSyBz3CQw1aK0S9UHwxKq-YZtIeqdcOby-Jc',
-        successHandler: function() {
+        successHandler: function(count) {
             var elems = getStatusElements(statusSought);
             if (elems.length) {
-                getDisplayFunc(statusSought, this.responseText, elems)();
+                getDisplayFunc(statusSought, count, elems)();
             } else {
                 window.addEventListener('load',
-                        getDisplayFunc(statusSought, this.responseText), true);
+                        getDisplayFunc(statusSought, count), true);
             }
         }
     });
 });
 
-function getDisplayFunc(statusSought, responseText, elements) {
+function getDisplayFunc(statusSought, count, elements) {
     return function() {
-        var response = JSON.parse(responseText);
         var elems = elements || document.querySelectorAll(
                 '[data-status="' + statusSought + '"]');
         elems.forEach(function(el) {
-            el.innerHTML = response.rows[0][0];
+            el.innerHTML = '' + count;
         });
     };
 }

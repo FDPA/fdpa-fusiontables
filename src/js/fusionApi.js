@@ -24,7 +24,10 @@ function getResolutionsCount(options) {
     }
     var successHandler = options.successHandler || function() {};
     makeResolutionsCountRequest(statusSought, fusiontable, googleApiKey,
-            successHandler);
+            function() {
+                var response = JSON.parse(this.responseText);
+                successHandler(response.rows[0][0]);
+            });
 }
 
 function makeResolutionsCountRequest(statusSought, fusiontable, googleApiKey,
