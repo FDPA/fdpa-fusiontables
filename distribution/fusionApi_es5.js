@@ -69,7 +69,22 @@
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getResolutionsCount", function() { return getResolutionsCount; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_fdpa_fusionApi_js__ = __webpack_require__(1);
+
+/* jshint browser: true */
+/* jshint esversion: 6 */
+
+
+
+window.fdpaResolutions = __WEBPACK_IMPORTED_MODULE_0_fdpa_fusionApi_js__["a" /* default */];
+
+
+/***/ }),
+/* 1 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export getResolutionsCount */
 
 /* jshint browser: true */
 /* jshint esversion: 6 */
@@ -114,7 +129,7 @@ function makeResolutionsCountRequest(statusSought, fusiontable, googleApiKey,
     request.send();
 }
 
-/* harmony default export */ __webpack_exports__["default"] = ({
+/* harmony default export */ __webpack_exports__["a"] = ({
     'getResolutionsCount': getResolutionsCount
 });
 

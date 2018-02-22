@@ -3,7 +3,7 @@
 var path = require('path');
 
 module.exports = {
-    entry: './src/js/fusionApi.js',
+    entry: './src/js/fusionApi_es5.js',
     output: {
         filename: 'fusionApi_es5.js',
         path: path.resolve(__dirname, 'distribution')
@@ -11,8 +11,9 @@ module.exports = {
     resolve: {
         extensions: ['.js'],
         alias: {
-            fdpa: 'src/js',
-            '': 'src/js'
+            fdpa_resolutions: '.',
+            fdpa: '.',
+            '': '.'
         }
     }
 };
