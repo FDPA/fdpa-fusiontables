@@ -2,9 +2,10 @@
   "name": "fdpa-fusiontables",
   "version": "1.0.0",
   "description": "Fair Districts PA fusiontables language binding",
-  "main": "js/fusionApi.js",
+  "main": "src/js/fusionApi.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx webpack --config webpack.distribution.config.js",
+    "test": "./build_test.sh"
   },
   "keywords": [
     "fair",

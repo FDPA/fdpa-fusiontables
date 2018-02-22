@@ -8,7 +8,8 @@ import fdpa from 'fdpa/fusionApi.js';
     fdpa.getResolutionsCount({
         status: statusSought,
         fusiontable: '10Uc_t_dBYUV_K_j6HdCMSgLXGs94bXvunQBGDOjF',
-        googleApiKey: 'AIzaSyDFtlZBiU0ZzSrotn4WnPTjWg9g33EZ5Po',
+        // Developers: Substitute your API key here.
+        googleApiKey: 'AIzaSyBz3CQw1aK0S9UHwxKq-YZtIeqdcOby-Jc',
         successHandler: function() {
             var elems = getStatusElements(statusSought);
             if (elems.length) {
