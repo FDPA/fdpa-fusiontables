@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Fair Districts PA fusiontables language binding",
   "main": "src/js/fusionApi.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/RobinIsTheBird/fdpa-fusiontables.git"
+  },
   "scripts": {
     "build": "npx webpack --config webpack.distribution.config.js",
     "test": "./build_test.sh"
