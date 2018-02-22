@@ -69,5 +69,6 @@ The result will be the creation of ./distribution/fusionApi.js.
 To build the test harness:
 1. Clone the source
 2. npm install
-3. npm run test
-4. Follow the instructions at the end of the npm run test output
+3. Edit harness/app.js and change the API key
+4. npm run test
+5. Follow the instructions at the end of the npm run test output
