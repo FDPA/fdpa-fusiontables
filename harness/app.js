@@ -24,8 +24,7 @@ import fdpaResolutions from 'fdpa/fusionApi.js';
 
 function getDisplayFunc(statusSought, count, elements) {
     return function() {
-        var elems = elements || document.querySelectorAll(
-                '[data-status="' + statusSought + '"]');
+        var elems = elements || getStatusElements(statusSought);
         elems.forEach(function(el) {
             el.innerHTML = '' + count;
         });
