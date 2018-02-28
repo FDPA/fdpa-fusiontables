@@ -41,19 +41,36 @@ The resolutions API can now be accessed via the global variable
 ```javascript
 function getResolutionsCount(options)
 ```
-where `options` is of the form:
-```javascript
+which returns
+```
 {
-    fusiontable: optional string, // the ID of the google fusiontable
-    googleApiKey: required string, // the API key created in the
-        // Google developers console for the FDPA Resolutions project
-    statusSought: optional string, // -, inWork, materialsSent, passed, or
-        // refusedOrOther
-    successHandler: required function // called when a count is available
+   verified: boolean, true means the request was submitted
+   errorFields: array, lists fields that failed if verified is false
+   googleApiKey: options.googleApiKey or an error message
+   fusionTable: options.fusionTable or a sensible default
+   statusSought: an array of status strings derived from options.status,
+     or an error message
 }
 ```
-and the `successHandler` is defined by the caller to take one argument,
-where the argument is an integer representing the count.
+and where `options` is of the form:
+```javascript
+{
+   googleApiKey: required string,
+   fusiontable: optional string, defaults to the expected table
+   status: optional string, defaults to '-'
+   successHandler: optional function, defaults to an empty function
+}
+```
+and where:
+- googleApiKey is an API key created in the Google developers console
+  for the FDPA Resolutions project.
+- fusiontable is the ID of a Google fusiontable for the
+  FDPA Resolutions project.
+- status may be '-', 'inWork', 'materialsSent', 'passed',
+  'refusedOrOther', or a combination of these separated by a comma
+  and no space.
+- successHandler function has the prototype `function(count)`,
+  where `count` is an integer returned from the query.
 
 ## Build from Source
 

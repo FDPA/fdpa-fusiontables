@@ -4,7 +4,7 @@
 
 import fdpaResolutions from 'fdpa/fusionApi.js';
 
-['passed', 'inWork'].forEach(function(statusSought) {
+['passed', 'inWork', 'inWork,materialsSent'].forEach(function(statusSought) {
     fdpaResolutions.getResolutionsCount({
         status: statusSought,
         fusiontable: '10Uc_t_dBYUV_K_j6HdCMSgLXGs94bXvunQBGDOjF',
