@@ -1,6 +1,6 @@
 {
   "name": "fdpa-fusiontables",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Fair Districts PA fusiontables language binding",
   "main": "src/js/fusionApi.js",
   "repository": {
